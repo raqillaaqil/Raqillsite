@@ -1,0 +1,508 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Muhammad Raqilla Ramdan Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .marquee-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .marquee {
+      display: flex;
+      gap: 2rem;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+
+    .marquee-left {
+      animation: scroll-left 20s linear infinite;
+    }
+
+    .marquee-right {
+      animation: scroll-right 20s linear infinite;
+    }
+
+    .marquee img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 relative min-h-screen">
+ <nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-white shadow-md transition-all duration-300 ease-in-out">
+  <!-- Logo & Nama -->
+  <div class="flex items-center space-x-3">
+    <div class="w-12 h-12 rounded-full bg-purple-600 p-1">
+      <img alt="Profile picture of muhammad raqilla ramdan purple background"
+        class="rounded-full" height="48"
+        src="img/Screenshot 2025-09-17 084903.png" width="48" />
+    </div>
+    <span class="font-extrabold text-gray-900 text-sm tracking-wider uppercase">
+      Raqillsite
+    </span>
+  </div>
+
+  <!-- Menu Desktop -->
+  <ul class="hidden md:flex space-x-10 font-extrabold text-gray-900 text-sm tracking-wider uppercase">
+    <li><a class="hover:underline" href="#">Home</a></li>
+    <li><a class="hover:underline" href="#about">About</a></li>
+    <li><a class="hover:underline" href="#projects">Projects</a></li>
+    <li><a class="hover:underline" href="#certificate">Certificate</a></li>
+    <li><a class="hover:underline" href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- Burger Button -->
+  <button id="burger" class="md:hidden focus:outline-none">
+    <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</nav>
+
+<!-- Menu Mobile -->
+<div id="mobileMenu" class="fixed top-16 left-0 w-full bg-white shadow-md transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden">
+  <ul class="flex flex-col space-y-4 px-6 py-4 font-extrabold text-gray-900 text-sm tracking-wider uppercase">
+    <li><a class="hover:underline" href="#">Home</a></li>
+    <li><a class="hover:underline" href="#about">About</a></li>
+    <li><a class="hover:underline" href="#projects">Projects</a></li>
+    <li><a class="hover:underline" href="#certificate">Certificate</a></li>
+    <li><a class="hover:underline" href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+  <!-- Social Icons vertical left -->
+  <!-- Social Icons vertical left -->
+  <div aria-label="Social media links"
+    class="fixed top-1/3 left-0 bg-white shadow-lg rounded-r-md flex flex-col space-y-4 p-2 z-20">
+    <a aria-label="LinkedIn" class="w-10 h-10 flex items-center justify-center text-black hover:text-purple-700"
+      href="https://www.linkedin.com/in/Muhammad Raqilla" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin-in fa-lg"></i>
+    </a>
+
+    <a aria-label="Instagram" class="w-10 h-10 flex items-center justify-center text-black hover:text-purple-700"
+      href="https://www.instagram.com/_muhammadraqillaramdan" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram fa-lg"></i>
+    </a>
+
+    <a aria-label="Twitter" class="w-10 h-10 flex items-center justify-center text-black hover:text-purple-700"
+      href="https://twitter.com/usernamekamu" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-twitter fa-lg"></i>
+    </a>
+
+    <a aria-label="YouTube" class="w-10 h-10 flex items-center justify-center text-black hover:text-purple-700"
+      href="https://www.youtube.com/@AqilAqil-o5p" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-youtube fa-lg"></i>
+    </a>
+
+    <a aria-label="GitHub" class="w-10 h-10 flex items-center justify-center text-black hover:text-purple-700"
+      href="https://github.com/raqillaaqil" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github fa-lg"></i>
+    </a>
+  </div>
+
+
+  <!-- Main content -->
+  <main class="flex flex-col items-center justify-center text-center px-6 py-24 min-h-[calc(100vh-64px)] bg-gray-50">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 uppercase max-w-4xl leading-tight">
+      welcome to Raqillsite
+    </h1>
+    <p class="mt-6 max-w-xl text-gray-800 text-lg sm:text-xl leading-relaxed">
+      A Result-Oriented Web Developer building and managing Websites and Web
+      Applications that leads to the success of the overall product
+    </p>
+    <button
+      class="mt-12 bg-purple-700 hover:bg-purple-600 text-white font-extrabold text-lg tracking-wider uppercase px-10 py-4 rounded-md shadow-lg transition-shadow duration-300" href="#projects">Projects</button>
+  </main>
+
+  <!-- Chat with me button bottom right -->
+  <div class="fixed bottom-6 right-6 flex items-center space-x-3 z-30">
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+      class="bg-white rounded-full shadow-lg px-4 py-2 text-gray-900 font-medium flex items-center space-x-2"
+      style="box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);">
+      <span>Chat with me</span>
+      <span class="text-2xl">👋</span>
+    </a>
+    <a href="https://wa.me/6285774889983" target="_blank" rel="noopener noreferrer" aria-label="Open chat"
+      class="w-14 h-14 rounded-full bg-purple-700 shadow-lg flex items-center justify-center text-white text-2xl hover:bg-purple-600 transition-colors duration-300">
+      <i class="fas fa-comment-alt"></i>
+    </a>
+  </div>
+
+
+  <!-- Scroll indicator bottom center -->
+  <div class="fixed bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-1 text-gray-900">
+    <div class="w-6 h-10 rounded-full border-2 border-gray-900 flex items-center justify-center">
+      <div class="w-2 h-2 rounded-full bg-gray-900 animate-bounce">
+      </div>
+    </div>
+    <div class="text-xs font-extrabold">
+      .
+    </div>
+  </div>
+
+  <section id="about" class="max-w-6xl mx-auto px-6 py-12">
+    <header class="text-center mb-12">
+  <h2 class="text-3xl font-extrabold tracking-widest uppercase text-black">
+    ABOUT ME
+  </h2>
+  <div class="w-12 h-1 bg-purple-600 rounded mx-auto mt-2"></div>
+  <p class="mt-6 text-center text-gray-600 max-w-xl mx-auto leading-relaxed text-lg">
+    Here you will find more information about me, what I do, and my current
+    skills mostly in terms of programming and technology
+  </p>
+</header>
+
+<div class="flex flex-col md:flex-row md:justify-between md:gap-20">
+  <div class="md:w-1/2">
+    <h3 class="text-xl font-bold mb-4">Get to know me!</h3>
+    <p class="mb-4 text-gray-700 leading-relaxed">
+      I'm a student at <strong>SMK Wikrama Bogor</strong>, majoring in 
+      <strong>Software Development (PPLG)</strong>. Currently, I'm focusing on becoming a 
+      <strong>Frontend Developer</strong> and building modern, responsive, and user-friendly 
+      <strong>Web Applications</strong>.
+    </p>
+    <p class="mb-4 text-gray-700 leading-relaxed">
+      As a <strong>Web Developer</strong>, I enjoy learning and experimenting with new 
+      technologies to create clean and efficient websites. I also have a decent ability in 
+      <strong>English</strong>, which helps me understand global tech resources and collaborate 
+      with the wider developer community.
+    </p>
+    <p class="mb-6 text-gray-700 leading-relaxed">
+      I'm open to opportunities, projects, and collaborations where I can grow, 
+      contribute, and sharpen my skills in web development. If you’re interested, 
+      feel free to <strong>connect</strong> with me!
+    </p>
+
+
+        <button
+          class="bg-purple-700 text-white font-bold uppercase px-8 py-3 rounded-md tracking-widest hover:bg-purple-800 transition">
+          Contact
+        </button>
+      </div>
+
+      <div class="md:w-1/2 mt-12 md:mt-0">
+        <h3 class="text-xl font-bold mb-6">My Skills</h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">HTML</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">CSS</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">JavaScript</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">React</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">WordPress</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">PHP</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">Laravel</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">GIT</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">GitHub</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">Responsive Design</span>
+          <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md select-none">SEO</span>        </div>
+      </div>
+    </div>
+  </section>
+
+ <section id="projects" class="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-16 pb-24">
+  <!-- Judul -->
+  <div class="text-center max-w-3xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-widest uppercase mb-2">
+      PROJECTS
+    </h2>
+    <div class="w-12 h-1 bg-purple-600 rounded mx-auto mb-6"></div>
+    <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+      Here you will find some of the personal and clients projects that I created with each project
+      containing its own case study
+    </p>
+  </div>
+
+  <!-- Project 1: Digihive (Coming Soon) -->
+  <div
+    class="mt-20 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-24 max-w-7xl mx-auto">
+    
+    <!-- Image + Overlay -->
+    <div class="relative w-full max-w-[620px]">
+      <img src="img/project/hero-image1.svg"
+        alt="Digihive Project"
+        class="w-full object-contain rounded-lg shadow-lg" />
+      <div class="absolute inset-0 bg-black/60 flex items-center justify-center rounded-lg backdrop-blur-sm">
+        <span class="text-white text-2xl font-bold tracking-widest animate-pulse">
+          🚀 Coming Soon
+        </span>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="max-w-lg text-center lg:text-left">
+      <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+        Digihive
+        <span class="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full animate-pulse">
+          Coming Soon
+        </span>
+      </h3>
+      <p class="text-gray-600 mb-8 leading-relaxed">
+        Digihive adalah startup teknologi yang berfokus pada solusi digital inovatif, layaknya sarang lebah (hive) yang produktif dan terhubung. Nama ini melambangkan kolaborasi, kreativitas, dan efisiensi dalam menghadirkan layanan digital modern bagi bisnis maupun individu.
+      </p>
+      <button disabled
+        class="bg-gray-400 text-white font-extrabold tracking-widest uppercase px-8 py-3 rounded-md cursor-not-allowed">
+        Coming Soon
+      </button>
+    </div>
+  </div>
+
+  <!-- Project 2: Voteaja (Coming Soon) -->
+  <div
+    class="mt-20 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-24 max-w-7xl mx-auto">
+
+    <!-- Image + Overlay -->
+    <div class="relative w-full max-w-[620px]">
+      <img src="img/project/hero-image1.svg"
+        alt="Voteaja Project"
+        class="w-full object-contain rounded-lg shadow-lg" />
+      <div class="absolute inset-0 bg-black/60 flex items-center justify-center rounded-lg backdrop-blur-sm">
+        <span class="text-white text-2xl font-bold tracking-widest animate-pulse">
+          🚀 Coming Soon
+        </span>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="max-w-lg text-center lg:text-left">
+      <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+        Voteaja
+        <span class="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full animate-pulse">
+          Coming Soon
+        </span>
+      </h3>
+      <p class="text-gray-600 mb-8 leading-relaxed">
+        Voteaja is a simple and fast online voting website that makes it easy for users to create, participate in, and view poll results in real time. With its user-friendly interface, Voteaja is perfect for surveys, quizzes, and collaborative decision-making.
+      </p>
+      <button disabled
+        class="bg-gray-400 text-white font-extrabold tracking-widest uppercase px-8 py-3 rounded-md cursor-not-allowed">
+        Coming Soon
+      </button>
+    </div>
+  </div>
+
+  <!-- Project 3: Fashop (Coming Soon) -->
+  <div
+    class="mt-20 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-24 max-w-7xl mx-auto">
+    
+    <!-- Image + Overlay -->
+    <div class="relative w-full max-w-[620px]">
+      <img src="img/project/hero-image1.svg"
+        alt="Fashop Project"
+        class="w-full object-contain rounded-lg shadow-lg" />
+      <div class="absolute inset-0 bg-black/60 flex items-center justify-center rounded-lg backdrop-blur-sm">
+        <span class="text-white text-2xl font-bold tracking-widest animate-pulse">
+          🚀 Coming Soon
+        </span>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="max-w-lg text-center lg:text-left">
+      <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+        Fashop
+        <span class="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full animate-pulse">
+          Coming Soon
+        </span>
+      </h3>
+      <p class="text-gray-600 mb-8 leading-relaxed">
+        Fashop is an e-commerce startup that offers a faster, easier, and more stylish online shopping experience. Focusing on fashion and lifestyle products, Fashop offers a selection of the latest trends at affordable prices and convenient service.
+      </p>
+      <button disabled
+        class="bg-gray-400 text-white font-extrabold tracking-widest uppercase px-8 py-3 rounded-md cursor-not-allowed">
+        Coming Soon
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  <section id="certificate" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5 text-uppercase">My Certificates</h2>
+
+      <!-- Baris 1: Kanan -->
+      <div class="marquee-container mb-4">
+        <div class="marquee marquee-right">
+          <img src="img/cretificate/Screenshot 2025-06-15 110709.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 110729.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 110804.png" />
+          <!-- Duplicate for seamless -->
+          <img src="img/cretificate/Screenshot 2025-06-15 110709.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 110729.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 110804.png" />
+        </div>
+      </div>
+
+      <!-- Baris 2: Kiri -->
+      <div class="marquee-container mb-4">
+        <div class="marquee marquee-left">
+          <img src="img/cretificate/Screenshot 2025-06-15 111657.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 111716.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 111952.png" />
+          <!-- Duplicate -->
+          <img src="img/cretificate/Screenshot 2025-06-15 111657.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 111716.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 111952.png" />
+        </div>
+      </div>
+
+      <!-- Baris 3: Kanan -->
+      <div class="marquee-container">
+        <div class="marquee marquee-right">
+          <img src="img/cretificate/Screenshot 2025-06-15 112651.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 112633.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 112608.png" />
+          <!-- Duplicate -->
+          <img src="img/cretificate/Screenshot 2025-06-15 112651.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 112633.png" />
+          <img src="img/cretificate/Screenshot 2025-06-15 112608.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+ <section id="contact" class="relative bg-[#f7f7f7] min-h-screen">
+  <img alt="Light gray geometric pattern background with triangles"
+    class="absolute inset-0 w-full h-96 object-cover pointer-events-none select-none" height="400"
+    src="https://storage.googleapis.com/a1aa/image/bbad8de5-89a2-4bae-6837-ba167df3290a.jpg" width="1920" />
+
+  <div class="relative z-10 max-w-6xl mx-auto pt-24 px-6 text-center">
+    <h2 class="text-3xl font-extrabold uppercase tracking-widest text-black">CONTACT</h2>
+    <div class="w-10 h-1 bg-purple-700 rounded-full mx-auto mt-2"></div>
+    <p class="mt-6 text-gray-900 text-lg max-w-xl mx-auto leading-relaxed">
+      Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
+    </p>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Form -->
+    <form action="#"
+      class="bg-white rounded-lg shadow-lg px-10 py-12 space-y-8">
+      <div>
+        <label class="block text-gray-700 font-semibold text-sm mb-2 tracking-wide" for="name">Name</label>
+        <input
+          class="w-full rounded-md bg-[#eaeaea] placeholder-gray-500 text-gray-700 font-semibold text-sm py-4 px-5 focus:outline-none focus:ring-2 focus:ring-purple-700"
+          id="name" name="name" placeholder="Enter Your Name" type="text" />
+      </div>
+      <div>
+        <label class="block text-gray-700 font-semibold text-sm mb-2 tracking-wide" for="email">Email</label>
+        <input
+          class="w-full rounded-md bg-[#eaeaea] placeholder-gray-500 text-gray-700 font-semibold text-sm py-4 px-5 focus:outline-none focus:ring-2 focus:ring-purple-700"
+          id="email" name="email" placeholder="Enter Your Email" type="email" />
+      </div>
+      <div>
+        <label class="block text-gray-700 font-semibold text-sm mb-2 tracking-wide" for="message">Message</label>
+        <textarea
+          class="w-full rounded-md bg-[#eaeaea] placeholder-gray-500 text-gray-700 font-semibold text-sm py-4 px-5 resize-none focus:outline-none focus:ring-2 focus:ring-purple-700"
+          id="message" name="message" placeholder="Enter Your Message" rows="6"></textarea>
+      </div>
+      <button
+        class="bg-purple-700 text-white font-semibold text-sm rounded-md py-4 px-8 hover:bg-purple-800 transition-colors"
+        type="submit">
+        Send Message
+      </button>
+    </form>
+
+    <div class="flex flex-col items-end">
+  <div class="w-full h-[500px] rounded-lg overflow-hidden shadow-lg">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0207905014486!2d106.79929477475314!3d-6.620122993391465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5b1bbd0d3c9%3A0x4b2f2d5ffef6b1b7!2sKebun%20Raya%20Bogor!5e0!3m2!1sid!2sid!4v1726823456789"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <p class="mt-3 text-gray-700 text-sm text-right">
+    📍 Lokasi: <span class="font-semibold">Bogor, Jawa Barat</span> <br>
+    Tempat Tinggal / Basecamp DigiHive
+  </p>
+</div>
+
+  </div>
+</section>
+
+  <footer class="bg-black text-white font-sans">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex mt-20 flex-col md:flex-row justify-between">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h2 class="font-extrabold text-white text-lg mb-4">Muhammad Raqilla Ramdan</h2>
+        <p class="text-white text-sm leading-relaxed max-w-md">
+          A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the
+          success of the overall product
+        </p>
+      </div>
+      <div class="md:w-1/2 flex flex-col items-start md:items-end">
+        <h2 class="font-extrabold text-white text-lg mb-4">SOCIAL</h2>
+        <div class="flex space-x-6 text-white text-xl">
+          <a href="https://www.linkedin.com/in/Muhammad Raqilla" aria-label="LinkedIn" class="hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.github.com/raqillaaqil" aria-label="GitHub" class="hover:text-gray-400"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Twitter" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Typewriter" class="hover:text-gray-400"><i class="fas fa-tty"></i></a>
+          <a href="https://www.youtube.com/@AqilAqil-o5p" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hover:text-gray-400"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-gray-700" />
+
+    <div class="max-w-7xl mx-auto px-6 py-4 text-center text-xs text-white">
+      © Copyright 2025 . Made by <a href="#" class="font-extrabold underline">M Raqilla Ramdan</a>
+    </div>
+  </footer>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+  integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+<script>
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  burger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("-translate-y-full");
+    mobileMenu.classList.toggle("translate-y-0");
+  });
+</script>
+
+</html>
